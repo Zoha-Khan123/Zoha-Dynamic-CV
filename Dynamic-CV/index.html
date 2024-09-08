@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic CV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CV Generator</h1>
+
+    <section>
+      <form onsubmit="return takeValue()">
+        <fieldset>
+          <div class="personal-information">
+            <!-- Name Part -->
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="Name" required />
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="Email" required />
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="Phone" required />
+          </div>
+
+          <!-- Education -->
+          <div class="about-me-section">
+            <label for="about-me">About Me:</label>
+            <textarea name="about" id="About" required></textarea>
+          </div>
+
+          <!-- Experience -->
+          <div class="experience-section">
+            <label for="experience">Experience:</label>
+            <textarea name="experience" id="Experience" required></textarea>
+          </div>
+
+          <!-- Skills -->
+          <div class="skills-section">
+            <label for="skills">Skills:</label>
+            <textarea name="skills" id="Skills" required></textarea>
+          </div>
+
+          <div class="button">
+            <button>Generate Resume</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Div to display the generated CV -->
+    <div id="cv-output" class="cv-output"></div>
+
+    <script src="index.js"></script>
+     
+  </body>
+</html>

@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(55, 161, 130);
+  color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+form fieldset {
+  width: 100%;
+  max-width: 600px; /* Maximum width for larger screens */
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 100%; /* Full width for responsiveness */
+  width: 500px;
+  max-width: 500px; /* Default maximum width */
+  height: 70px; /* Fixed height for consistency */
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc; /* Light grey border */
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px; /* Increase height for textareas */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid rgb(55, 161, 130);
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  margin: 2rem 0;
+}
+
+button {
+  background-color: rgb(55, 161, 130);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px; /* Maximum width for button */
+  font-size: 1.2rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 767px) {
+  form fieldset {
+    width: 90%;
+    padding: 1rem;
+  }
+  input,
+  textarea {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%; /* Override max-width for smaller screens */
+    height: 60px; /* Adjust height for smaller screens */
+  }
+
+  textarea {
+    height: 80px; /* Adjust height for textareas on smaller screens */
+  }
+
+  h1 {
+    font-size: 40px;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    margin-top: 3rem;
+  }
+
+  form fieldset {
+    width: 80%;
+  }
+
+  input,
+  textarea {
+    max-width: 600px; /* Increase max-width for medium screens */
+    height: 80px; /* Increase height for medium screens */
+  }
+
+  textarea {
+    height: 120px; /* Increase height for textareas on medium screens */
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  form fieldset {
+    width: 60%;
+  }
+
+  input,
+  textarea {
+    max-width: 800px; /* Increase max-width for larger screens */
+    height: 90px; /* Increase height for larger screens */
+  }
+
+  textarea {
+    height: 150px; /* Increase height for textareas on larger screens */
+  }
+}
+
+/* Styling for CV Output */
+
+.cv-container {
+  background: linear-gradient(
+    to right,
+    rgb(3, 126, 89),
+    rgb(33, 179, 135),
+    rgb(175, 255, 231)
+  );
+  color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.cv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cv-name {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.cv-email,
+.cv-phone,
+.cv-about,
+.cv-experience,
+.cv-skills {
+  font-size: 1.2rem;
+}
+
+.cv-about,
+.cv-experience,
+.cv-skills {
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design for CV Output */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 1rem;
+  }
+
+  .cv-name {
+    font-size: 1.5rem;
+  }
+
+  .cv-email,
+  .cv-phone,
+  .cv-about,
+  .cv-experience,
+  .cv-skills {
+    font-size: 1rem;
+  }
+}
